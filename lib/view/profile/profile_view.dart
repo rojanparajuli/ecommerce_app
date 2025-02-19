@@ -1,3 +1,4 @@
+import 'package:ecommerce/view/orders/orders_view.dart';
 import 'package:ecommerce/view/settings/settings_view.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +13,7 @@ class _ProfileViewState extends State<ProfileView> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child:  Scaffold(
+      child: Scaffold(
         body: Column(
           children: [
             Row(
@@ -84,6 +85,12 @@ class _ProfileViewState extends State<ProfileView> {
             ),
             ListTile(
               title: Text('My Orders'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => OrdersView()),
+                );
+              },
               trailing:
                   Icon(Icons.arrow_forward_ios, size: 20, color: Colors.black),
               subtitle: Text('Already have 12 orders'),
@@ -91,47 +98,47 @@ class _ProfileViewState extends State<ProfileView> {
             SizedBox(
               height: 10,
             ),
-             ListTile(
+            ListTile(
               title: Text('Shipping Address'),
               trailing:
                   Icon(Icons.arrow_forward_ios, size: 20, color: Colors.black),
               subtitle: Text('3 addresses'),
             ),
-              SizedBox(
+            SizedBox(
               height: 10,
             ),
-             ListTile(
+            ListTile(
               title: Text('Payment methods'),
               trailing:
                   Icon(Icons.arrow_forward_ios, size: 20, color: Colors.black),
               subtitle: Text('visa  **34'),
             ),
-              SizedBox(
+            SizedBox(
               height: 10,
             ),
-             ListTile(
+            ListTile(
               title: Text('Promocodes'),
               trailing:
                   Icon(Icons.arrow_forward_ios, size: 20, color: Colors.black),
               subtitle: Text('You have special promocodes'),
             ),
-              SizedBox(
+            SizedBox(
               height: 10,
             ),
-             ListTile(
+            ListTile(
               title: Text('My reviews'),
               trailing:
                   Icon(Icons.arrow_forward_ios, size: 20, color: Colors.black),
               subtitle: Text('Reviews for 4 items'),
             ),
-              SizedBox(
+            SizedBox(
               height: 10,
             ),
-             ListTile(
+            ListTile(
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) =>  SettingsView()),
+                  MaterialPageRoute(builder: (context) => SettingsView()),
                 );
               },
               title: Text('Settings'),
