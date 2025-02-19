@@ -1,7 +1,8 @@
-import 'package:ecommerce/cubit/email_validation_cubit.dart';
-import 'package:ecommerce/cubit/name_validation_cubit.dart';
+import 'package:ecommerce/bloc/email/email_validator_bloc.dart';
+import 'package:ecommerce/bloc/name/name_validator_bloc.dart';
+import 'package:ecommerce/cubit/buttons_toggle_cubit.dart';
 import 'package:ecommerce/cubit/password_toggle_cubit.dart';
-import 'package:ecommerce/view/sign_up_view.dart';
+import 'package:ecommerce/view/auth/sign_up_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -16,9 +17,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider(create: (context) => EmailValidationCubit()),
+        BlocProvider(create: (context) => EmailValidationBloc()),
         BlocProvider(create: (context) => PasswordVisibilityCubit()),
-        BlocProvider(create: (context) => NameValidationCubit()),
+        BlocProvider(create: (context) => NameValidationBloc()),
+        BlocProvider(create: (context) => ButtonsToggleCubit()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

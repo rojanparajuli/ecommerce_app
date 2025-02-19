@@ -1,10 +1,14 @@
-import 'package:ecommerce/cubit/name_validation_cubit.dart';
+import 'package:ecommerce/bloc/name/name_validator_bloc.dart';
+import 'package:ecommerce/bloc/name/name_validator_event.dart';
+import 'package:ecommerce/bloc/name/name_validator_state.dart';
+import 'package:ecommerce/bloc/email/email_validator_bloc.dart';
+import 'package:ecommerce/bloc/email/email_validator_event.dart';
+import 'package:ecommerce/bloc/email/email_validator_state.dart';
 import 'package:ecommerce/cubit/password_toggle_cubit.dart';
-import 'package:ecommerce/cubit/email_validation_cubit.dart';
-import 'package:ecommerce/view/login_view.dart';
-import 'package:ecommerce/widget/elevated.dart';
-import 'package:ecommerce/widget/social_buttons.dart';
-import 'package:ecommerce/widget/textfield.dart';
+import 'package:ecommerce/view/auth/login_view.dart';
+import 'package:ecommerce/widget/button/elevated.dart';
+import 'package:ecommerce/widget/button/social_buttons.dart';
+import 'package:ecommerce/widget/textfield/textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -56,36 +60,39 @@ class _SignUpViewState extends State<SignUpView> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  BlocBuilder<NameValidationCubit, bool>(
-                      builder: (context, isValid) {
-                    return Center(
-                      child: customTextField(
-                        'Name',
-                        onChanged: (value) {
-                          context.read<NameValidationCubit>().namevalidation(value);
-                        },
-                        controller: _nameController,
-                        suffixIcon: isValid
-                            ? const Icon(Icons.check, color: Colors.green)
-                            : null,
-                      ),
-                    );
-                  }),
+                  BlocBuilder<NameValidationBloc, NameValidationState>(
+                    builder: (context, state) {
+                      return Center(
+                        child: customTextField(
+                          'Name',
+                          onChanged: (value) {
+                            context.read<NameValidationBloc>().add(ValidateName(value));
+                          },
+                          controller: _nameController,
+                          suffixIcon: state is NameValid
+                              ? const Icon(Icons.check, color: Colors.green)
+                              : (state is NameInvalid
+                                  ? const Icon(Icons.close, color: Colors.red)
+                                  : null),
+                        ),
+                      );
+                    },
+                  ),
                   const SizedBox(height: 20),
-                  BlocBuilder<EmailValidationCubit, bool>(
-                    builder: (context, isValid) {
+                  BlocBuilder<EmailValidationBloc, EmailValidationState>(
+                    builder: (context, state) {
                       return Center(
                         child: customTextField(
                           'Email',
                           controller: _emailController,
                           onChanged: (value) {
-                            context
-                                .read<EmailValidationCubit>()
-                                .validateEmail(value);
+                            context.read<EmailValidationBloc>().add(ValidateEmail(value));
                           },
-                          suffixIcon: isValid
+                          suffixIcon: state is EmailValid
                               ? const Icon(Icons.check, color: Colors.green)
-                              : null,
+                              : (state is EmailInvalid
+                                  ? const Icon(Icons.close, color: Colors.red)
+                                  : null),
                         ),
                       );
                     },
@@ -103,9 +110,7 @@ class _SignUpViewState extends State<SignUpView> {
                                 : Icons.visibility,
                           ),
                           onPressed: () {
-                            context
-                                .read<PasswordVisibilityCubit>()
-                                .toggleVisibility();
+                            context.read<PasswordVisibilityCubit>().toggleVisibility();
                           },
                         ),
                       );
@@ -114,7 +119,12 @@ class _SignUpViewState extends State<SignUpView> {
                   const SizedBox(height: 10),
                   GestureDetector(
                     onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=> LoginView()));
+                      context.read<NameValidationBloc>().add(ResetNameValidation());
+                      context.read<EmailValidationBloc>().add(ResetValidation());
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const LoginView()),
+                      );
                     },
                     child: const Padding(
                       padding: EdgeInsets.all(10.0),
@@ -137,8 +147,7 @@ class _SignUpViewState extends State<SignUpView> {
               const SizedBox(height: 20),
               SizedBox(
                   width: 350, child: elevatedButtonWidget('Sign Up', () {})),
-              const SizedBox(
-                  height: 50), // Reduced from 120 to fit smaller screens
+              const SizedBox(height: 150),
               Column(
                 children: [
                   const Text(
