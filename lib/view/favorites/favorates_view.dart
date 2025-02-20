@@ -10,6 +10,12 @@ class FavoratesView extends StatefulWidget {
 class _FavoratesViewState extends State<FavoratesView> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return SafeArea(
+      child: const Scaffold(
+        body: Column(children: [
+          
+        ],),
+      ),
+    );
   }
 }
