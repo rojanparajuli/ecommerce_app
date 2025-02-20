@@ -2,8 +2,8 @@ import 'package:ecommerce/bloc/email/email_validator_bloc.dart';
 import 'package:ecommerce/bloc/email/email_validator_event.dart';
 import 'package:ecommerce/bloc/email/email_validator_state.dart';
 import 'package:ecommerce/cubit/password_toggle_cubit.dart';
+import 'package:ecommerce/utilities/bottom_navigation_bar.dart';
 import 'package:ecommerce/view/auth/forget_password_view.dart';
-import 'package:ecommerce/view/profile/profile_view.dart';
 import 'package:ecommerce/widget/button/elevated.dart';
 import 'package:ecommerce/widget/button/social_buttons.dart';
 import 'package:ecommerce/widget/textfield/textfield.dart';
@@ -141,7 +141,7 @@ class _LoginViewState extends State<LoginView> {
                         SizedBox(
                             width: 350,
                             child: elevatedButtonWidget('Login', () {
-                              Navigator.push(context, MaterialPageRoute(builder: (context)=> ProfileView()));
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=> CustomBottomNavigationBar()));
                             })),
                         const SizedBox(height: 220),
                         Column(
