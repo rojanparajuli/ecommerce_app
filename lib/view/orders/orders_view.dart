@@ -16,7 +16,7 @@ class OrdersView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<NavigationCubit, int>(
+    return BlocBuilder<OrderNavigationCubit, int>(
       builder: (context, selectedIndex) {
         return SafeArea(
           child: Scaffold(
@@ -58,7 +58,7 @@ class OrdersView extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     ElevatedButton(
-                      onPressed: () => context.read<NavigationCubit>().changeIndex(0),
+                      onPressed: () => context.read<OrderNavigationCubit>().changeIndex(0),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: selectedIndex == 0 ? Colors.black : Colors.grey,
                         foregroundColor: Colors.white,
@@ -66,7 +66,7 @@ class OrdersView extends StatelessWidget {
                       child: const Text('Delivered'),
                     ),
                     ElevatedButton(
-                      onPressed: () => context.read<NavigationCubit>().changeIndex(1),
+                      onPressed: () => context.read<OrderNavigationCubit>().changeIndex(1),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: selectedIndex == 1 ? Colors.black : Colors.grey,
                         foregroundColor: Colors.white,
@@ -74,7 +74,7 @@ class OrdersView extends StatelessWidget {
                       child: const Text('Processing'),
                     ),
                     ElevatedButton(
-                      onPressed: () => context.read<NavigationCubit>().changeIndex(2),
+                      onPressed: () => context.read<OrderNavigationCubit>().changeIndex(2),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: selectedIndex == 2 ? Colors.black : Colors.grey,
                         foregroundColor: Colors.white,

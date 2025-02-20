@@ -1,6 +1,7 @@
 import 'package:ecommerce/bloc/email/email_validator_bloc.dart';
 import 'package:ecommerce/bloc/email/email_validator_event.dart';
 import 'package:ecommerce/bloc/email/email_validator_state.dart';
+import 'package:ecommerce/view/auth/login_view.dart';
 import 'package:ecommerce/widget/button/elevated.dart';
 import 'package:ecommerce/widget/textfield/textfield.dart';
 import 'package:flutter/material.dart';
@@ -86,7 +87,9 @@ class _ForgetPasswordViewState extends State<ForgetPasswordView> {
                 ),
                 const SizedBox(height: 60),
                 SizedBox(
-                    width: 350, child: elevatedButtonWidget('Send', () {})),
+                    width: 350, child: elevatedButtonWidget('Send', () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginView()));
+                    })),
                 const SizedBox(height: 220),
               ],
             ),

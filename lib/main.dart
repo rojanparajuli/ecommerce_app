@@ -1,5 +1,6 @@
 import 'package:ecommerce/bloc/email/email_validator_bloc.dart';
 import 'package:ecommerce/bloc/name/name_validator_bloc.dart';
+import 'package:ecommerce/bloc/navigation/nav_bloc.dart';
 import 'package:ecommerce/cubit/buttons_toggle_cubit.dart';
 import 'package:ecommerce/cubit/navigation_cubit.dart';
 import 'package:ecommerce/cubit/password_toggle_cubit.dart';
@@ -22,7 +23,8 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (context) => PasswordVisibilityCubit()),
         BlocProvider(create: (context) => NameValidationBloc()),
         BlocProvider(create: (context) => ButtonsToggleCubit()),
-        BlocProvider(create: (context)=> NavigationCubit())
+        BlocProvider(create: (context)=> OrderNavigationCubit()),
+        BlocProvider(create: (context)=> NavigationBloc()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

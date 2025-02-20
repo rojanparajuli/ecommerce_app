@@ -66,7 +66,9 @@ class _SignUpViewState extends State<SignUpView> {
                         child: customTextField(
                           'Name',
                           onChanged: (value) {
-                            context.read<NameValidationBloc>().add(ValidateName(value));
+                            context
+                                .read<NameValidationBloc>()
+                                .add(ValidateName(value));
                           },
                           controller: _nameController,
                           suffixIcon: state is NameValid
@@ -86,7 +88,9 @@ class _SignUpViewState extends State<SignUpView> {
                           'Email',
                           controller: _emailController,
                           onChanged: (value) {
-                            context.read<EmailValidationBloc>().add(ValidateEmail(value));
+                            context
+                                .read<EmailValidationBloc>()
+                                .add(ValidateEmail(value));
                           },
                           suffixIcon: state is EmailValid
                               ? const Icon(Icons.check, color: Colors.green)
@@ -110,7 +114,9 @@ class _SignUpViewState extends State<SignUpView> {
                                 : Icons.visibility,
                           ),
                           onPressed: () {
-                            context.read<PasswordVisibilityCubit>().toggleVisibility();
+                            context
+                                .read<PasswordVisibilityCubit>()
+                                .toggleVisibility();
                           },
                         ),
                       );
@@ -119,11 +125,16 @@ class _SignUpViewState extends State<SignUpView> {
                   const SizedBox(height: 10),
                   GestureDetector(
                     onTap: () {
-                      context.read<NameValidationBloc>().add(ResetNameValidation());
-                      context.read<EmailValidationBloc>().add(ResetValidation());
+                      context
+                          .read<NameValidationBloc>()
+                          .add(ResetNameValidation());
+                      context
+                          .read<EmailValidationBloc>()
+                          .add(ResetValidation());
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => const LoginView()),
+                        MaterialPageRoute(
+                            builder: (context) => const LoginView()),
                       );
                     },
                     child: const Padding(
@@ -146,7 +157,14 @@ class _SignUpViewState extends State<SignUpView> {
               ),
               const SizedBox(height: 20),
               SizedBox(
-                  width: 350, child: elevatedButtonWidget('Sign Up', () {})),
+                  width: 350,
+                  child: elevatedButtonWidget('Sign Up', () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => LoginView(),
+                        ));
+                  })),
               const SizedBox(height: 150),
               Column(
                 children: [
