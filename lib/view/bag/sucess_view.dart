@@ -25,7 +25,7 @@ class SuccessView extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               Positioned(
-                top:50,
+                top: 50,
                 left: 75,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -52,27 +52,33 @@ class SuccessView extends StatelessWidget {
                     ),
                     SizedBox(height: 20),
                     elevatedButtonWidget('Continue Shopping', () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=> CustomBottomNavigationBar()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  CustomBottomNavigationBar()));
                     }),
                   ],
                 ),
               ),
-                Positioned(
-                  bottom: 0,
-                  left: 160,
-                  top: 830,
-                  child: Center(
-                        child: Container(
-                          height: 6,
-                          width: 100,
-                          decoration: BoxDecoration(
-                            color: const Color.fromARGB(255, 70, 70, 70),
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                        ),
-                      ),
+              Positioned(
+                bottom: 0,
+                left: 160,
+                top: 830,
+                child: Center(
+                  child: Container(
+                    height: 6,
+                    width: 100,
+                    decoration: BoxDecoration(
+                      color: const Color.fromARGB(255, 70, 70, 70),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                  ),
                 ),
-                SizedBox(height: 10,)
+              ),
+              SizedBox(
+                height: 10,
+              )
             ],
           ),
         ),

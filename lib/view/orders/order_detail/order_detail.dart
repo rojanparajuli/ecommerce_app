@@ -322,7 +322,8 @@ class _OrderDetailState extends State<OrderDetail> {
                   style: TextStyle(color: Colors.black),
                   children: <TextSpan>[
                     TextSpan(
-                      text: '3 Newbridge Court ,Chino Hills, CA 91709, United States',
+                      text:
+                          '3 Newbridge Court ,Chino Hills, CA 91709, United States',
                       style: TextStyle(
                           color: Colors.black, fontWeight: FontWeight.bold),
                     ),
@@ -338,7 +339,7 @@ class _OrderDetailState extends State<OrderDetail> {
                       width: 20,
                     ),
                     Image.asset(
-                      'assets/masterCard.png',
+                      'assets/mastercard.png',
                       height: 30,
                       width: 30,
                     ),
