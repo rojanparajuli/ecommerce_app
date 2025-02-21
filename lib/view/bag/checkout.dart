@@ -250,7 +250,7 @@ class _CheckoutState extends State<Checkout> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => SucessView()));
+                              builder: (context) => SuccessView()));
                     })),
               ),
               SizedBox(height: 5),
