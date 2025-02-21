@@ -1,3 +1,6 @@
+import 'package:ecommerce/view/bag/payment_method_view.dart';
+import 'package:ecommerce/view/bag/shipping_address_view.dart';
+import 'package:ecommerce/view/bag/sucess_view.dart';
 import 'package:ecommerce/widget/button/elevated.dart';
 import 'package:flutter/material.dart';
 
@@ -48,7 +51,9 @@ class _CheckoutState extends State<Checkout> {
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(10),
-                    boxShadow: [BoxShadow(color: Theme.of(context).shadowColor)],
+                    boxShadow: [
+                      BoxShadow(color: Theme.of(context).shadowColor)
+                    ],
                   ),
                   width: 390,
                   child: Column(
@@ -58,9 +63,18 @@ class _CheckoutState extends State<Checkout> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text('Rojan Parajuli'),
-                          Text(
-                            'Change',
-                            style: TextStyle(color: Colors.red),
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          ShippingAddressView()));
+                            },
+                            child: Text(
+                              'Change',
+                              style: TextStyle(color: Colors.red),
+                            ),
                           ),
                         ],
                       ),
@@ -87,9 +101,18 @@ class _CheckoutState extends State<Checkout> {
                           fontWeight: FontWeight.bold),
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(19.0),
-                    child: Text('Change', style: TextStyle(color: Colors.red)),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => PaymentMethodView()));
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.all(19.0),
+                      child:
+                          Text('Change', style: TextStyle(color: Colors.red)),
+                    ),
                   ),
                 ],
               ),
@@ -101,7 +124,7 @@ class _CheckoutState extends State<Checkout> {
                       color: Colors.white,
                       padding: EdgeInsets.all(20),
                       child: Image.asset(
-                        'assets/masterCard.png',
+                        'assets/mastercard.png',
                         height: 30,
                         width: 30,
                       ),
@@ -168,7 +191,6 @@ class _CheckoutState extends State<Checkout> {
                           Text('2-3 days')
                         ],
                       )),
-                      
                 ],
               ),
               SizedBox(height: 20),
@@ -177,33 +199,71 @@ class _CheckoutState extends State<Checkout> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                  Text('Order:', style: TextStyle(color: Colors.grey),),
-                  Text(' Rs. 100.00', style: TextStyle(color: Colors.black),),
-                ],),
+                    Text(
+                      'Order:',
+                      style: TextStyle(color: Colors.grey),
+                    ),
+                    Text(
+                      ' Rs. 100.00',
+                      style: TextStyle(color: Colors.black),
+                    ),
+                  ],
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.all(19.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                  Text('Delivery:', style: TextStyle(color: Colors.grey),),
-                  Text(' Rs. 100.00', style: TextStyle(color: Colors.black),),
-                ],),
+                    Text(
+                      'Delivery:',
+                      style: TextStyle(color: Colors.grey),
+                    ),
+                    Text(
+                      ' Rs. 100.00',
+                      style: TextStyle(color: Colors.black),
+                    ),
+                  ],
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.all(19.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                  Text('Summary:', style: TextStyle(color: Colors.grey),),
-                  Text(' Rs. 200.00', style: TextStyle(color: Colors.black),),
-                ],),
+                    Text(
+                      'Summary:',
+                      style: TextStyle(color: Colors.grey),
+                    ),
+                    Text(
+                      ' Rs. 200.00',
+                      style: TextStyle(color: Colors.black),
+                    ),
+                  ],
+                ),
               ),
+              SizedBox(height: 20),
               Center(
                 child: SizedBox(
-                  width: 300,
-                  child: elevatedButtonWidget('Submit Order', (){})),
-              )
+                    width: 300,
+                    child: elevatedButtonWidget('Submit Order', () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => SucessView()));
+                    })),
+              ),
+              SizedBox(height: 5),
+              Center(
+                child: Container(
+                  height: 8,
+                  width: 100,
+                  decoration: BoxDecoration(
+                    color: const Color.fromARGB(255, 62, 61, 61),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
