@@ -23,8 +23,8 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (context) => PasswordVisibilityCubit()),
         BlocProvider(create: (context) => NameValidationBloc()),
         BlocProvider(create: (context) => ButtonsToggleCubit()),
-        BlocProvider(create: (context)=> OrderNavigationCubit()),
-        BlocProvider(create: (context)=> NavigationBloc()),
+        BlocProvider(create: (context) => OrderNavigationCubit()),
+        BlocProvider(create: (context) => NavigationBloc()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
