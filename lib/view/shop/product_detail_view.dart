@@ -25,6 +25,7 @@ class ProductDetailView extends StatelessWidget {
     showModalBottomSheet(
       context: context,
       shape: const RoundedRectangleBorder(
+        side: BorderSide(color: Colors.black, width: 1),
         borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
       ),
       builder: (context) {
@@ -150,7 +151,41 @@ class ProductDetailView extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 16),
+           
+            const SizedBox(height: 16),
             Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  ElevatedButton(
+                    onPressed: () => _showSizeSelector(context),
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                    ),
+                    child: Row(
+                      children: [
+                        const Text("Select Size"),
+                        SizedBox(width: 8),
+                        Icon(Icons.arrow_drop_down, size: 20),
+                      ],
+                    ),
+                  ),
+                  ElevatedButton(
+                    onPressed: () => _showColorSelector(context),
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                    ),
+                    child: const Text("Select Color"),
+                  ),
+                ],
+              ),
+            ),
+             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Text(
                 productName,
@@ -170,33 +205,6 @@ class ProductDetailView extends StatelessWidget {
               child: Text(
                 productDescription,
                 style: const TextStyle(fontSize: 16, color: Colors.black54),
-              ),
-            ),
-            const SizedBox(height: 16),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  ElevatedButton(
-                    onPressed: () => _showSizeSelector(context),
-                    style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                    ),
-                    child: const Text("Select Size"),
-                  ),
-                  ElevatedButton(
-                    onPressed: () => _showColorSelector(context),
-                    style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                    ),
-                    child: const Text("Select Color"),
-                  ),
-                ],
               ),
             ),
             const SizedBox(height: 20),
