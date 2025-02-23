@@ -93,7 +93,7 @@ class _HomeState extends State<Home> {
                               productDescription: 'Dorothy Perkins',
                               productName: 'Evening dress',
                               productPrice: 'Rs.1500',
-                              productImage: 'assets/products/hehe.jpeg',
+                              productImages: ['assets/products/hehe.jpeg'],
                             )));
                       },
                       child: Padding(
