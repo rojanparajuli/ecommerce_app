@@ -1,17 +1,3 @@
-# eCommerce App UI - Flutter
-
-This is a Flutter-based eCommerce app UI that provides a visually appealing and user-friendly shopping experience. The project includes various screens showcasing different aspects of an eCommerce application, such as product listings, product details, cart, checkout, and more.
-
-## Features
-
-- Modern eCommerce UI design
-- Responsive layout for different screen sizes
-- Product listing and details pages
-- Shopping cart and checkout screens
-- User-friendly navigation
-
-## Screenshots
-
 Here are some screenshots of the app:
 <p align="center">
    <img src="assets/screenshots/Screenshot_2025-02-23-15-45-26-377_com.example.ecommerce.jpg" width="24%" />
@@ -36,6 +22,22 @@ Here are some screenshots of the app:
    <img src="assets/screenshots/Screenshot_2025-02-23-15-46-36-793_com.example.ecommerce.jpg" width="24%" />
    <img src="assets/screenshots/Screenshot_2025-02-23-15-46-40-202_com.example.ecommerce.jpg" width="24%" />
 </p>
+
+# eCommerce App UI - Flutter
+
+This is a Flutter-based eCommerce app UI that provides a visually appealing and user-friendly shopping experience. The project includes various screens showcasing different aspects of an eCommerce application, such as product listings, product details, cart, checkout, and more.
+
+## Features
+
+- Modern eCommerce UI design
+- Responsive layout for different screen sizes
+- Product listing and details pages
+- Shopping cart and checkout screens
+- User-friendly navigation
+
+## Screenshots
+
+
 
 ## Getting Started
 
