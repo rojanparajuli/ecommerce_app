@@ -526,7 +526,7 @@ class _BagViewState extends State<BagView> {
                     children: [
                       GestureDetector(
                         onTap: () {
-                          _promocodeBottoModalSheet();
+                          promocodeBottoModalSheet();
                         },
                         child: Container(
                           width: 350,
@@ -586,7 +586,7 @@ class _BagViewState extends State<BagView> {
     );
   }
 
-  void _promocodeBottoModalSheet() {
+  void promocodeBottoModalSheet() {
     showModalBottomSheet(
       context: context,
       shape: RoundedRectangleBorder(

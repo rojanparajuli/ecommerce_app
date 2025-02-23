@@ -8,7 +8,6 @@ import 'package:ecommerce/bloc/navigation/nav_event.dart';
 import 'package:ecommerce/bloc/navigation/nav_state.dart';
 import 'package:flutter/material.dart';
 
-
 class NavigationBloc extends Bloc<NavigationEvent, NavigationState> {
   NavigationBloc() : super(const NavigationState(0, Home())) {
     on<NavigateTo>((event, emit) {
@@ -25,7 +24,7 @@ class NavigationBloc extends Bloc<NavigationEvent, NavigationState> {
       case 2:
         return const BagView();
       case 3:
-        return const FavoratesView();
+        return const FavoritesView();
       case 4:
         return const ProfileView();
       default:

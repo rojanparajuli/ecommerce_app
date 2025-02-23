@@ -30,7 +30,8 @@ class _HomeState extends State<Home> {
             children: <Widget>[
               GestureDetector(
                 onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => OfferScreen()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => OfferScreen()));
                 },
                 child: Container(
                   decoration: BoxDecoration(
@@ -88,13 +89,17 @@ class _HomeState extends State<Home> {
                   children: [
                     GestureDetector(
                       onTap: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => ProductDetailView(
-                              productDescription: 'Dorothy Perkins',
-                              productName: 'Evening dress',
-                              productPrice: 'Rs.1500',
-                              productImages: ['assets/products/hehe.jpeg'],
-                            )));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ProductDetailView(
+                                      productDescription: 'Dorothy Perkins',
+                                      productName: 'Evening dress',
+                                      productPrice: 'Rs.1500',
+                                      productImages: [
+                                        'assets/products/hehe.jpeg'
+                                      ],
+                                    )));
                       },
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
@@ -166,8 +171,10 @@ class _HomeState extends State<Home> {
                                       ],
                                     ),
                                     Column(
-                                      mainAxisAlignment: MainAxisAlignment.start,
-                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
                                       children: [
                                         Text('Dorothy Perkins'),
                                         Text(
@@ -181,8 +188,8 @@ class _HomeState extends State<Home> {
                                             Text(
                                               'Rs.2000',
                                               style: TextStyle(
-                                                  decoration:
-                                                      TextDecoration.lineThrough,
+                                                  decoration: TextDecoration
+                                                      .lineThrough,
                                                   color: Colors.grey),
                                             ),
                                             SizedBox(
@@ -190,7 +197,8 @@ class _HomeState extends State<Home> {
                                             ),
                                             Text(
                                               'Rs.1500',
-                                              style: TextStyle(color: Colors.red),
+                                              style:
+                                                  TextStyle(color: Colors.red),
                                             ),
                                           ],
                                         )
@@ -204,325 +212,378 @@ class _HomeState extends State<Home> {
                         ),
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        width: 180,
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(10),
-                            border: Border.all(color: Colors.white),
-                            shape: BoxShape.rectangle),
-                        child: Column(
-                          children: [
-                            Expanded(
-                              child: Stack(
-                                children: [
-                                  Image.asset('assets/products/jpeg(2)',
-                                      fit: BoxFit.fill),
-                                  Container(
-                                    decoration: BoxDecoration(
-                                      color: Colors.red,
-                                      borderRadius: BorderRadius.circular(10),
-                                      // border: Border.all(),
-                                    ),
-                                    child: Text(
-                                      ' -20% ',
-                                      style: TextStyle(color: Colors.white),
-                                    ),
-                                  ),
-                                  Positioned(
-                                    bottom: -4,
-                                    right: -4,
-                                    child: Container(
-                                      width: 30,
-                                      height: 30,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ProductDetailView(
+                                      productDescription: 'Dorothy Perkins',
+                                      productName: 'Evening dress',
+                                      productPrice: 'Rs.1500',
+                                      productImages: [
+                                        'assets/products/jpeg(2)'
+                                      ],
+                                    )));
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          width: 180,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(10),
+                              border: Border.all(color: Colors.white),
+                              shape: BoxShape.rectangle),
+                          child: Column(
+                            children: [
+                              Expanded(
+                                child: Stack(
+                                  children: [
+                                    Image.asset('assets/products/jpeg(2)',
+                                        fit: BoxFit.fill),
+                                    Container(
                                       decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                          color: Colors.white,
-                                          boxShadow: [
-                                            BoxShadow(
-                                              color: Colors.grey,
-                                              blurRadius: 5,
-                                            )
-                                          ]),
-                                      child: Icon(
-                                        Icons.favorite_border,
-                                        color: Colors.grey,
+                                        color: Colors.red,
+                                        borderRadius: BorderRadius.circular(10),
+                                        // border: Border.all(),
+                                      ),
+                                      child: Text(
+                                        ' -20% ',
+                                        style: TextStyle(color: Colors.white),
                                       ),
                                     ),
-                                  )
-                                ],
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(19.0),
-                              child: Column(
-                                children: [
-                                  Row(
-                                    children: [
-                                      Icon(Icons.star,
-                                          color: Colors.yellow, size: 15),
-                                      Icon(Icons.star,
-                                          color: Colors.yellow, size: 15),
-                                      Icon(Icons.star,
-                                          color: Colors.yellow, size: 15),
-                                      Icon(Icons.star,
-                                          color: Colors.yellow, size: 15),
-                                      Icon(Icons.star,
-                                          color: Colors.yellow, size: 15),
-                                    ],
-                                  ),
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Text('Dorothy Perkins'),
-                                      Text(
-                                        'Evening dress',
-                                        style: TextStyle(
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.bold),
+                                    Positioned(
+                                      bottom: -4,
+                                      right: -4,
+                                      child: Container(
+                                        width: 30,
+                                        height: 30,
+                                        decoration: BoxDecoration(
+                                            shape: BoxShape.circle,
+                                            color: Colors.white,
+                                            boxShadow: [
+                                              BoxShadow(
+                                                color: Colors.grey,
+                                                blurRadius: 5,
+                                              )
+                                            ]),
+                                        child: Icon(
+                                          Icons.favorite_border,
+                                          color: Colors.grey,
+                                        ),
                                       ),
-                                      Row(
-                                        children: [
-                                          Text(
-                                            'Rs.2000',
-                                            style: TextStyle(
-                                                decoration:
-                                                    TextDecoration.lineThrough,
-                                                color: Colors.grey),
-                                          ),
-                                          SizedBox(
-                                            width: 10,
-                                          ),
-                                          Text(
-                                            'Rs.1500',
-                                            style: TextStyle(color: Colors.red),
-                                          ),
-                                        ],
-                                      )
-                                    ],
-                                  ),
-                                ],
+                                    )
+                                  ],
+                                ),
                               ),
-                            ),
-                          ],
+                              Padding(
+                                padding: const EdgeInsets.all(19.0),
+                                child: Column(
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Icon(Icons.star,
+                                            color: Colors.yellow, size: 15),
+                                        Icon(Icons.star,
+                                            color: Colors.yellow, size: 15),
+                                        Icon(Icons.star,
+                                            color: Colors.yellow, size: 15),
+                                        Icon(Icons.star,
+                                            color: Colors.yellow, size: 15),
+                                        Icon(Icons.star,
+                                            color: Colors.yellow, size: 15),
+                                      ],
+                                    ),
+                                    Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text('Dorothy Perkins'),
+                                        Text(
+                                          'Evening dress',
+                                          style: TextStyle(
+                                              fontSize: 16,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                        Row(
+                                          children: [
+                                            Text(
+                                              'Rs.2000',
+                                              style: TextStyle(
+                                                  decoration: TextDecoration
+                                                      .lineThrough,
+                                                  color: Colors.grey),
+                                            ),
+                                            SizedBox(
+                                              width: 10,
+                                            ),
+                                            Text(
+                                              'Rs.1500',
+                                              style:
+                                                  TextStyle(color: Colors.red),
+                                            ),
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        width: 180,
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(10),
-                            border: Border.all(color: Colors.white),
-                            shape: BoxShape.rectangle),
-                        child: Column(
-                          children: [
-                            Expanded(
-                              child: Stack(
-                                children: [
-                                  Image.asset(
-                                      'assets/products/Pink Satin Set Lace Nightie Nightgown Lingerie.jpeg',
-                                      fit: BoxFit.fill),
-                                  Container(
-                                    decoration: BoxDecoration(
-                                      color: Colors.red,
-                                      borderRadius: BorderRadius.circular(10),
-                                      // border: Border.all(),
-                                    ),
-                                    child: Text(
-                                      ' -20% ',
-                                      style: TextStyle(color: Colors.white),
-                                    ),
-                                  ),
-                                  Positioned(
-                                    bottom: -4,
-                                    right: -4,
-                                    child: Container(
-                                      width: 30,
-                                      height: 30,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ProductDetailView(
+                                      productDescription: 'Dorothy Perkins',
+                                      productName: 'Evening dress',
+                                      productPrice: 'Rs.1500',
+                                      productImages: [
+                                        'assets/products/Pink Satin Set Lace Nightie Nightgown Lingerie.jpeg'
+                                      ],
+                                    )));
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          width: 180,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(10),
+                              border: Border.all(color: Colors.white),
+                              shape: BoxShape.rectangle),
+                          child: Column(
+                            children: [
+                              Expanded(
+                                child: Stack(
+                                  children: [
+                                    Image.asset(
+                                        'assets/products/Pink Satin Set Lace Nightie Nightgown Lingerie.jpeg',
+                                        fit: BoxFit.fill),
+                                    Container(
                                       decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                          color: Colors.white,
-                                          boxShadow: [
-                                            BoxShadow(
-                                              color: Colors.grey,
-                                              blurRadius: 5,
-                                            )
-                                          ]),
-                                      child: Icon(
-                                        Icons.favorite_border,
-                                        color: Colors.grey,
+                                        color: Colors.red,
+                                        borderRadius: BorderRadius.circular(10),
+                                        // border: Border.all(),
+                                      ),
+                                      child: Text(
+                                        ' -20% ',
+                                        style: TextStyle(color: Colors.white),
                                       ),
                                     ),
-                                  )
-                                ],
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(19.0),
-                              child: Column(
-                                children: [
-                                  Row(
-                                    children: [
-                                      Icon(Icons.star,
-                                          color: Colors.yellow, size: 15),
-                                      Icon(Icons.star,
-                                          color: Colors.yellow, size: 15),
-                                      Icon(Icons.star,
-                                          color: Colors.yellow, size: 15),
-                                      Icon(Icons.star,
-                                          color: Colors.yellow, size: 15),
-                                      Icon(Icons.star,
-                                          color: Colors.yellow, size: 15),
-                                    ],
-                                  ),
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Text('Dorothy Perkins'),
-                                      Text(
-                                        'Evening dress',
-                                        style: TextStyle(
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.bold),
+                                    Positioned(
+                                      bottom: -4,
+                                      right: -4,
+                                      child: Container(
+                                        width: 30,
+                                        height: 30,
+                                        decoration: BoxDecoration(
+                                            shape: BoxShape.circle,
+                                            color: Colors.white,
+                                            boxShadow: [
+                                              BoxShadow(
+                                                color: Colors.grey,
+                                                blurRadius: 5,
+                                              )
+                                            ]),
+                                        child: Icon(
+                                          Icons.favorite_border,
+                                          color: Colors.grey,
+                                        ),
                                       ),
-                                      Row(
-                                        children: [
-                                          Text(
-                                            'Rs.2000',
-                                            style: TextStyle(
-                                                decoration:
-                                                    TextDecoration.lineThrough,
-                                                color: Colors.grey),
-                                          ),
-                                          SizedBox(
-                                            width: 10,
-                                          ),
-                                          Text(
-                                            'Rs.1500',
-                                            style: TextStyle(color: Colors.red),
-                                          ),
-                                        ],
-                                      )
-                                    ],
-                                  ),
-                                ],
+                                    )
+                                  ],
+                                ),
                               ),
-                            ),
-                          ],
+                              Padding(
+                                padding: const EdgeInsets.all(19.0),
+                                child: Column(
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Icon(Icons.star,
+                                            color: Colors.yellow, size: 15),
+                                        Icon(Icons.star,
+                                            color: Colors.yellow, size: 15),
+                                        Icon(Icons.star,
+                                            color: Colors.yellow, size: 15),
+                                        Icon(Icons.star,
+                                            color: Colors.yellow, size: 15),
+                                        Icon(Icons.star,
+                                            color: Colors.yellow, size: 15),
+                                      ],
+                                    ),
+                                    Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text('Dorothy Perkins'),
+                                        Text(
+                                          'Evening dress',
+                                          style: TextStyle(
+                                              fontSize: 16,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                        Row(
+                                          children: [
+                                            Text(
+                                              'Rs.2000',
+                                              style: TextStyle(
+                                                  decoration: TextDecoration
+                                                      .lineThrough,
+                                                  color: Colors.grey),
+                                            ),
+                                            SizedBox(
+                                              width: 10,
+                                            ),
+                                            Text(
+                                              'Rs.1500',
+                                              style:
+                                                  TextStyle(color: Colors.red),
+                                            ),
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        width: 180,
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(10),
-                            border: Border.all(color: Colors.white),
-                            shape: BoxShape.rectangle),
-                        child: Column(
-                          children: [
-                            Expanded(
-                              child: Stack(
-                                children: [
-                                  Image.asset('assets/products/jpeg(3)',
-                                      fit: BoxFit.fill),
-                                  Container(
-                                    decoration: BoxDecoration(
-                                      color: Colors.red,
-                                      borderRadius: BorderRadius.circular(10),
-                                      // border: Border.all(),
-                                    ),
-                                    child: Text(
-                                      ' -20% ',
-                                      style: TextStyle(color: Colors.white),
-                                    ),
-                                  ),
-                                  Positioned(
-                                    bottom: -4,
-                                    right: -4,
-                                    child: Container(
-                                      width: 30,
-                                      height: 30,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ProductDetailView(
+                                      productDescription: 'Dorothy Perkins',
+                                      productName: 'Evening dress',
+                                      productPrice: 'Rs.1500',
+                                      productImages: [
+                                        'assets/products/jpeg(3)'
+                                      ],
+                                    )));
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          width: 180,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(10),
+                              shape: BoxShape.rectangle),
+                          child: Column(
+                            children: [
+                              Expanded(
+                                child: Stack(
+                                  children: [
+                                    Image.asset('assets/products/jpeg(3)',
+                                        fit: BoxFit.fill),
+                                    Container(
                                       decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                          color: Colors.white,
-                                          boxShadow: [
-                                            BoxShadow(
-                                              color: Colors.grey,
-                                              blurRadius: 5,
-                                            )
-                                          ]),
-                                      child: Icon(
-                                        Icons.favorite_border,
-                                        color: Colors.grey,
+                                        color: Colors.red,
+                                        borderRadius: BorderRadius.circular(10),
+                                        // border: Border.all(),
+                                      ),
+                                      child: Text(
+                                        ' -20% ',
+                                        style: TextStyle(color: Colors.white),
                                       ),
                                     ),
-                                  )
-                                ],
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(19.0),
-                              child: Column(
-                                children: [
-                                  Row(
-                                    children: [
-                                      Icon(Icons.star,
-                                          color: Colors.yellow, size: 15),
-                                      Icon(Icons.star,
-                                          color: Colors.yellow, size: 15),
-                                      Icon(Icons.star,
-                                          color: Colors.yellow, size: 15),
-                                      Icon(Icons.star,
-                                          color: Colors.yellow, size: 15),
-                                      Icon(Icons.star,
-                                          color: Colors.yellow, size: 15),
-                                    ],
-                                  ),
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Text('Dorothy Perkins'),
-                                      Text(
-                                        'Evening dress',
-                                        style: TextStyle(
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.bold),
+                                    Positioned(
+                                      bottom: -4,
+                                      right: -4,
+                                      child: Container(
+                                        width: 30,
+                                        height: 30,
+                                        decoration: BoxDecoration(
+                                            shape: BoxShape.circle,
+                                            color: Colors.white,
+                                            boxShadow: [
+                                              BoxShadow(
+                                                color: Colors.grey,
+                                                blurRadius: 5,
+                                              )
+                                            ]),
+                                        child: Icon(
+                                          Icons.favorite_border,
+                                          color: Colors.grey,
+                                        ),
                                       ),
-                                      Row(
-                                        children: [
-                                          Text(
-                                            'Rs.2000',
-                                            style: TextStyle(
-                                                decoration:
-                                                    TextDecoration.lineThrough,
-                                                color: Colors.grey),
-                                          ),
-                                          SizedBox(
-                                            width: 10,
-                                          ),
-                                          Text(
-                                            'Rs.1500',
-                                            style: TextStyle(color: Colors.red),
-                                          ),
-                                        ],
-                                      )
-                                    ],
-                                  ),
-                                ],
+                                    )
+                                  ],
+                                ),
                               ),
-                            ),
-                          ],
+                              Padding(
+                                padding: const EdgeInsets.all(19.0),
+                                child: Column(
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Icon(Icons.star,
+                                            color: Colors.yellow, size: 15),
+                                        Icon(Icons.star,
+                                            color: Colors.yellow, size: 15),
+                                        Icon(Icons.star,
+                                            color: Colors.yellow, size: 15),
+                                        Icon(Icons.star,
+                                            color: Colors.yellow, size: 15),
+                                        Icon(Icons.star,
+                                            color: Colors.yellow, size: 15),
+                                      ],
+                                    ),
+                                    Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text('Dorothy Perkins'),
+                                        Text(
+                                          'Evening dress',
+                                          style: TextStyle(
+                                              fontSize: 16,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                        Row(
+                                          children: [
+                                            Text(
+                                              'Rs.2000',
+                                              style: TextStyle(
+                                                  decoration: TextDecoration
+                                                      .lineThrough,
+                                                  color: Colors.grey),
+                                            ),
+                                            SizedBox(
+                                              width: 10,
+                                            ),
+                                            Text(
+                                              'Rs.1500',
+                                              style:
+                                                  TextStyle(color: Colors.red),
+                                            ),
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),
@@ -535,7 +596,6 @@ class _HomeState extends State<Home> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                  
                     Text('New',
                         style: TextStyle(
                             fontSize: 30,
@@ -550,7 +610,7 @@ class _HomeState extends State<Home> {
                             style: TextStyle(fontSize: 13, color: Colors.black))
                       ],
                     ),
-                      SizedBox(
+                    SizedBox(
                       height: 15,
                     ),
                     SizedBox(
@@ -558,439 +618,545 @@ class _HomeState extends State<Home> {
                       child: ListView(
                         scrollDirection: Axis.horizontal,
                         children: [
-                            Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        width: 180,
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(10),
-                            border: Border.all(color: Colors.white),
-                            shape: BoxShape.rectangle),
-                        child: Column(
-                          children: [
-                            Expanded(
-                              child: Stack(
-                                children: [
-                                  Image.asset('assets/products/first.jpeg',
-                                      fit: BoxFit.fill),
-                                  Container(
-                                    decoration: BoxDecoration(
-                                      color: Colors.black,
-                                      borderRadius: BorderRadius.circular(10),
-                                    ),
-                                    child: Text(
-                                      ' New ',
-                                      style: TextStyle(color: Colors.white),
-                                    ),
-                                  ),
-                                  Positioned(
-                                    bottom: -4,
-                                    right: -4,
-                                    child: Container(
-                                      width: 30,
-                                      height: 30,
-                                      decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                          color: Colors.white,
-                                          boxShadow: [
-                                            BoxShadow(
-                                              color: Colors.grey,
-                                              blurRadius: 5,
-                                            )
-                                          ]),
-                                      child: Icon(
-                                        Icons.favorite_border,
-                                        color: Colors.grey,
-                                      ),
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(19.0),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Container(
+                              width: 180,
+                              decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(10),
+                                  border: Border.all(color: Colors.white),
+                                  shape: BoxShape.rectangle),
                               child: Column(
                                 children: [
-                                  Row(
-                                    children: [
-                                      Icon(Icons.star,
-                                          color: Colors.yellow, size: 15),
-                                      Icon(Icons.star,
-                                          color: Colors.yellow, size: 15),
-                                      Icon(Icons.star,
-                                          color: Colors.yellow, size: 15),
-                                      Icon(Icons.star,
-                                          color: Colors.yellow, size: 15),
-                                      Icon(Icons.star,
-                                          color: Colors.yellow, size: 15),
-                                    ],
-                                  ),
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Text('Dorothy Perkins'),
-                                      Text(
-                                        ' dress',
-                                        style: TextStyle(
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                      Row(
-                                        children: [
-                                          Text(
-                                            'Rs.2000',
-                                            style: TextStyle(
-                                                decoration:
-                                                    TextDecoration.lineThrough,
-                                                color: Colors.grey),
+                                  Expanded(
+                                    child: Stack(
+                                      children: [
+                                        GestureDetector(
+                                          onTap: () {
+                                            Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        ProductDetailView(
+                                                          productDescription:
+                                                              'Dorothy Perkins',
+                                                          productName: 'Dress',
+                                                          productPrice:
+                                                              'Rs.1500',
+                                                          productImages: [
+                                                            'assets/products/first.jpeg'
+                                                          ],
+                                                        )));
+                                          },
+                                          child: Image.asset(
+                                              'assets/products/first.jpeg',
+                                              fit: BoxFit.fill),
+                                        ),
+                                        Container(
+                                          decoration: BoxDecoration(
+                                            color: Colors.black,
+                                            borderRadius:
+                                                BorderRadius.circular(10),
                                           ),
-                                          SizedBox(
-                                            width: 10,
+                                          child: Text(
+                                            ' New ',
+                                            style:
+                                                TextStyle(color: Colors.white),
                                           ),
-                                          Text(
-                                            'Rs.1500',
-                                            style: TextStyle(color: Colors.red),
-                                          ),
-                                        ],
-                                      )
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                     Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        width: 180,
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(10),
-                            border: Border.all(color: Colors.white),
-                            shape: BoxShape.rectangle),
-                        child: Column(
-                          children: [
-                            Expanded(
-                              child: Stack(
-                                children: [
-                                  Image.asset('assets/products/jpeg(1)',
-                                      fit: BoxFit.fill),
-                                  Container(
-                                    decoration: BoxDecoration(
-                                      color: Colors.black,
-                                      borderRadius: BorderRadius.circular(10),
-                                    ),
-                                    child: Text(
-                                      ' New ',
-                                      style: TextStyle(color: Colors.white),
-                                    ),
-                                  ),
-                                  Positioned(
-                                    bottom: -4,
-                                    right: -4,
-                                    child: Container(
-                                      width: 30,
-                                      height: 30,
-                                      decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                          color: Colors.white,
-                                          boxShadow: [
-                                            BoxShadow(
+                                        ),
+                                        Positioned(
+                                          bottom: -4,
+                                          right: -4,
+                                          child: Container(
+                                            width: 30,
+                                            height: 30,
+                                            decoration: BoxDecoration(
+                                                shape: BoxShape.circle,
+                                                color: Colors.white,
+                                                boxShadow: [
+                                                  BoxShadow(
+                                                    color: Colors.grey,
+                                                    blurRadius: 5,
+                                                  )
+                                                ]),
+                                            child: Icon(
+                                              Icons.favorite_border,
                                               color: Colors.grey,
-                                              blurRadius: 5,
-                                            )
-                                          ]),
-                                      child: Icon(
-                                        Icons.favorite_border,
-                                        color: Colors.grey,
-                                      ),
+                                            ),
+                                          ),
+                                        )
+                                      ],
                                     ),
-                                  )
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(19.0),
+                                    child: Column(
+                                      children: [
+                                        Row(
+                                          children: [
+                                            Icon(Icons.star,
+                                                color: Colors.yellow, size: 15),
+                                            Icon(Icons.star,
+                                                color: Colors.yellow, size: 15),
+                                            Icon(Icons.star,
+                                                color: Colors.yellow, size: 15),
+                                            Icon(Icons.star,
+                                                color: Colors.yellow, size: 15),
+                                            Icon(Icons.star,
+                                                color: Colors.yellow, size: 15),
+                                          ],
+                                        ),
+                                        Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Text('Dorothy Perkins'),
+                                            Text(
+                                              ' dress',
+                                              style: TextStyle(
+                                                  fontSize: 16,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                            Row(
+                                              children: [
+                                                Text(
+                                                  'Rs.2000',
+                                                  style: TextStyle(
+                                                      decoration: TextDecoration
+                                                          .lineThrough,
+                                                      color: Colors.grey),
+                                                ),
+                                                SizedBox(
+                                                  width: 10,
+                                                ),
+                                                Text(
+                                                  'Rs.1500',
+                                                  style: TextStyle(
+                                                      color: Colors.red),
+                                                ),
+                                              ],
+                                            )
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                  ),
                                 ],
                               ),
                             ),
-                            Padding(
-                              padding: const EdgeInsets.all(19.0),
-                              child: Column(
-                                children: [
-                                  Row(
-                                    children: [
-                                      Icon(Icons.star,
-                                          color: Colors.yellow, size: 15),
-                                      Icon(Icons.star,
-                                          color: Colors.yellow, size: 15),
-                                      Icon(Icons.star,
-                                          color: Colors.yellow, size: 15),
-                                      Icon(Icons.star,
-                                          color: Colors.yellow, size: 15),
-                                      Icon(Icons.star,
-                                          color: Colors.yellow, size: 15),
-                                    ],
-                                  ),
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Text('Dorothy Perkins'),
-                                      Text(
-                                        ' dress',
-                                        style: TextStyle(
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                      Row(
+                          ),
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => ProductDetailView(
+                                            productDescription:
+                                                'Dorothy Perkins',
+                                            productName: 'Dress',
+                                            productPrice: 'Rs.1500',
+                                            productImages: [
+                                              'assets/products/jpeg(1)'
+                                            ],
+                                          )));
+                            },
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Container(
+                                width: 180,
+                                decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(10),
+                                    border: Border.all(color: Colors.white),
+                                    shape: BoxShape.rectangle),
+                                child: Column(
+                                  children: [
+                                    Expanded(
+                                      child: Stack(
                                         children: [
-                                          Text(
-                                            'Rs.2000',
-                                            style: TextStyle(
-                                                decoration:
-                                                    TextDecoration.lineThrough,
-                                                color: Colors.grey),
+                                          Image.asset('assets/products/jpeg(1)',
+                                              fit: BoxFit.fill),
+                                          Container(
+                                            decoration: BoxDecoration(
+                                              color: Colors.black,
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                            ),
+                                            child: Text(
+                                              ' New ',
+                                              style: TextStyle(
+                                                  color: Colors.white),
+                                            ),
                                           ),
-                                          SizedBox(
-                                            width: 10,
+                                          Positioned(
+                                            bottom: -4,
+                                            right: -4,
+                                            child: Container(
+                                              width: 30,
+                                              height: 30,
+                                              decoration: BoxDecoration(
+                                                  shape: BoxShape.circle,
+                                                  color: Colors.white,
+                                                  boxShadow: [
+                                                    BoxShadow(
+                                                      color: Colors.grey,
+                                                      blurRadius: 5,
+                                                    )
+                                                  ]),
+                                              child: Icon(
+                                                Icons.favorite_border,
+                                                color: Colors.grey,
+                                              ),
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(19.0),
+                                      child: Column(
+                                        children: [
+                                          Row(
+                                            children: [
+                                              Icon(Icons.star,
+                                                  color: Colors.yellow,
+                                                  size: 15),
+                                              Icon(Icons.star,
+                                                  color: Colors.yellow,
+                                                  size: 15),
+                                              Icon(Icons.star,
+                                                  color: Colors.yellow,
+                                                  size: 15),
+                                              Icon(Icons.star,
+                                                  color: Colors.yellow,
+                                                  size: 15),
+                                              Icon(Icons.star,
+                                                  color: Colors.yellow,
+                                                  size: 15),
+                                            ],
                                           ),
-                                          Text(
-                                            'Rs.1500',
-                                            style: TextStyle(color: Colors.red),
+                                          Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.start,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Text('Dorothy Perkins'),
+                                              Text(
+                                                ' dress',
+                                                style: TextStyle(
+                                                    fontSize: 16,
+                                                    fontWeight:
+                                                        FontWeight.bold),
+                                              ),
+                                              Row(
+                                                children: [
+                                                  Text(
+                                                    'Rs.2000',
+                                                    style: TextStyle(
+                                                        decoration:
+                                                            TextDecoration
+                                                                .lineThrough,
+                                                        color: Colors.grey),
+                                                  ),
+                                                  SizedBox(
+                                                    width: 10,
+                                                  ),
+                                                  Text(
+                                                    'Rs.1500',
+                                                    style: TextStyle(
+                                                        color: Colors.red),
+                                                  ),
+                                                ],
+                                              )
+                                            ],
                                           ),
                                         ],
-                                      )
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                     Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        width: 180,
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(10),
-                            border: Border.all(color: Colors.white),
-                            shape: BoxShape.rectangle),
-                        child: Column(
-                          children: [
-                            Expanded(
-                              child: Stack(
-                                children: [
-                                  Image.asset('assets/products/jpeg',
-                                      fit: BoxFit.fill),
-                                  Container(
-                                    decoration: BoxDecoration(
-                                      color: Colors.black,
-                                      borderRadius: BorderRadius.circular(10),
-                                    ),
-                                    child: Text(
-                                      ' New ',
-                                      style: TextStyle(color: Colors.white),
-                                    ),
-                                  ),
-                                  Positioned(
-                                    bottom: -4,
-                                    right: -4,
-                                    child: Container(
-                                      width: 30,
-                                      height: 30,
-                                      decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                          color: Colors.white,
-                                          boxShadow: [
-                                            BoxShadow(
-                                              color: Colors.grey,
-                                              blurRadius: 5,
-                                            )
-                                          ]),
-                                      child: Icon(
-                                        Icons.favorite_border,
-                                        color: Colors.grey,
                                       ),
                                     ),
-                                  )
-                                ],
+                                  ],
+                                ),
                               ),
                             ),
-                            Padding(
-                              padding: const EdgeInsets.all(19.0),
-                              child: Column(
-                                children: [
-                                  Row(
-                                    children: [
-                                      Icon(Icons.star,
-                                          color: Colors.yellow, size: 15),
-                                      Icon(Icons.star,
-                                          color: Colors.yellow, size: 15),
-                                      Icon(Icons.star,
-                                          color: Colors.yellow, size: 15),
-                                      Icon(Icons.star,
-                                          color: Colors.yellow, size: 15),
-                                      Icon(Icons.star,
-                                          color: Colors.yellow, size: 15),
-                                    ],
-                                  ),
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Text('Dorothy Perkins'),
-                                      Text(
-                                        ' dress',
-                                        style: TextStyle(
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                      Row(
+                          ),
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => ProductDetailView(
+                                            productDescription:
+                                                'Dorothy Perkins',
+                                            productName: 'Dress',
+                                            productPrice: 'Rs.1500',
+                                            productImages: [
+                                              'assets/products/jpeg'
+                                            ],
+                                          )));
+                            },
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Container(
+                                width: 180,
+                                decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(10),
+                                    border: Border.all(color: Colors.white),
+                                    shape: BoxShape.rectangle),
+                                child: Column(
+                                  children: [
+                                    Expanded(
+                                      child: Stack(
                                         children: [
-                                          Text(
-                                            'Rs.2000',
-                                            style: TextStyle(
-                                                decoration:
-                                                    TextDecoration.lineThrough,
-                                                color: Colors.grey),
+                                          Image.asset('assets/products/jpeg',
+                                              fit: BoxFit.fill),
+                                          Container(
+                                            decoration: BoxDecoration(
+                                              color: Colors.black,
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                            ),
+                                            child: Text(
+                                              ' New ',
+                                              style: TextStyle(
+                                                  color: Colors.white),
+                                            ),
                                           ),
-                                          SizedBox(
-                                            width: 10,
+                                          Positioned(
+                                            bottom: -4,
+                                            right: -4,
+                                            child: Container(
+                                              width: 30,
+                                              height: 30,
+                                              decoration: BoxDecoration(
+                                                  shape: BoxShape.circle,
+                                                  color: Colors.white,
+                                                  boxShadow: [
+                                                    BoxShadow(
+                                                      color: Colors.grey,
+                                                      blurRadius: 5,
+                                                    )
+                                                  ]),
+                                              child: Icon(
+                                                Icons.favorite_border,
+                                                color: Colors.grey,
+                                              ),
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(19.0),
+                                      child: Column(
+                                        children: [
+                                          Row(
+                                            children: [
+                                              Icon(Icons.star,
+                                                  color: Colors.yellow,
+                                                  size: 15),
+                                              Icon(Icons.star,
+                                                  color: Colors.yellow,
+                                                  size: 15),
+                                              Icon(Icons.star,
+                                                  color: Colors.yellow,
+                                                  size: 15),
+                                              Icon(Icons.star,
+                                                  color: Colors.yellow,
+                                                  size: 15),
+                                              Icon(Icons.star,
+                                                  color: Colors.yellow,
+                                                  size: 15),
+                                            ],
                                           ),
-                                          Text(
-                                            'Rs.1500',
-                                            style: TextStyle(color: Colors.red),
+                                          Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.start,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Text('Dorothy Perkins'),
+                                              Text(
+                                                ' dress',
+                                                style: TextStyle(
+                                                    fontSize: 16,
+                                                    fontWeight:
+                                                        FontWeight.bold),
+                                              ),
+                                              Row(
+                                                children: [
+                                                  Text(
+                                                    'Rs.2000',
+                                                    style: TextStyle(
+                                                        decoration:
+                                                            TextDecoration
+                                                                .lineThrough,
+                                                        color: Colors.grey),
+                                                  ),
+                                                  SizedBox(
+                                                    width: 10,
+                                                  ),
+                                                  Text(
+                                                    'Rs.1500',
+                                                    style: TextStyle(
+                                                        color: Colors.red),
+                                                  ),
+                                                ],
+                                              )
+                                            ],
                                           ),
                                         ],
-                                      )
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                     Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        width: 180,
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(10),
-                            border: Border.all(color: Colors.white),
-                            shape: BoxShape.rectangle),
-                        child: Column(
-                          children: [
-                            Expanded(
-                              child: Stack(
-                                children: [
-                                  Image.asset('assets/products/second.jpeg',
-                                      fit: BoxFit.fill),
-                                  Container(
-                                    decoration: BoxDecoration(
-                                      color: Colors.black,
-                                      borderRadius: BorderRadius.circular(10),
-                                    ),
-                                    child: Text(
-                                      ' New ',
-                                      style: TextStyle(color: Colors.white),
-                                    ),
-                                  ),
-                                  Positioned(
-                                    bottom: -4,
-                                    right: -4,
-                                    child: Container(
-                                      width: 30,
-                                      height: 30,
-                                      decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                          color: Colors.white,
-                                          boxShadow: [
-                                            BoxShadow(
-                                              color: Colors.grey,
-                                              blurRadius: 5,
-                                            )
-                                          ]),
-                                      child: Icon(
-                                        Icons.favorite_border,
-                                        color: Colors.grey,
                                       ),
                                     ),
-                                  )
-                                ],
+                                  ],
+                                ),
                               ),
                             ),
-                            Padding(
-                              padding: const EdgeInsets.all(19.0),
-                              child: Column(
-                                children: [
-                                  Row(
-                                    children: [
-                                      Icon(Icons.star,
-                                          color: Colors.yellow, size: 15),
-                                      Icon(Icons.star,
-                                          color: Colors.yellow, size: 15),
-                                      Icon(Icons.star,
-                                          color: Colors.yellow, size: 15),
-                                      Icon(Icons.star,
-                                          color: Colors.yellow, size: 15),
-                                      Icon(Icons.star,
-                                          color: Colors.yellow, size: 15),
-                                    ],
-                                  ),
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Text('Dorothy Perkins'),
-                                      Text(
-                                        ' dress',
-                                        style: TextStyle(
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                      Row(
+                          ),
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => ProductDetailView(
+                                            productDescription:
+                                                'Dorothy Perkins',
+                                            productName: 'Dress',
+                                            productPrice: 'Rs.1500',
+                                            productImages: [
+                                              'assets/products/second.jpeg'
+                                            ],
+                                          )));
+                            },
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Container(
+                                width: 180,
+                                decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(10),
+                                    border: Border.all(color: Colors.white),
+                                    shape: BoxShape.rectangle),
+                                child: Column(
+                                  children: [
+                                    Expanded(
+                                      child: Stack(
                                         children: [
-                                          Text(
-                                            'Rs.2000',
-                                            style: TextStyle(
-                                                decoration:
-                                                    TextDecoration.lineThrough,
-                                                color: Colors.grey),
+                                          Image.asset(
+                                              'assets/products/second.jpeg',
+                                              fit: BoxFit.fill),
+                                          Container(
+                                            decoration: BoxDecoration(
+                                              color: Colors.black,
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                            ),
+                                            child: Text(
+                                              ' New ',
+                                              style: TextStyle(
+                                                  color: Colors.white),
+                                            ),
                                           ),
-                                          SizedBox(
-                                            width: 10,
+                                          Positioned(
+                                            bottom: -4,
+                                            right: -4,
+                                            child: Container(
+                                              width: 30,
+                                              height: 30,
+                                              decoration: BoxDecoration(
+                                                  shape: BoxShape.circle,
+                                                  color: Colors.white,
+                                                  boxShadow: [
+                                                    BoxShadow(
+                                                      color: Colors.grey,
+                                                      blurRadius: 5,
+                                                    )
+                                                  ]),
+                                              child: Icon(
+                                                Icons.favorite_border,
+                                                color: Colors.grey,
+                                              ),
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(19.0),
+                                      child: Column(
+                                        children: [
+                                          Row(
+                                            children: [
+                                              Icon(Icons.star,
+                                                  color: Colors.yellow,
+                                                  size: 15),
+                                              Icon(Icons.star,
+                                                  color: Colors.yellow,
+                                                  size: 15),
+                                              Icon(Icons.star,
+                                                  color: Colors.yellow,
+                                                  size: 15),
+                                              Icon(Icons.star,
+                                                  color: Colors.yellow,
+                                                  size: 15),
+                                              Icon(Icons.star,
+                                                  color: Colors.yellow,
+                                                  size: 15),
+                                            ],
                                           ),
-                                          Text(
-                                            'Rs.1500',
-                                            style: TextStyle(color: Colors.red),
+                                          Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.start,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Text('Dorothy Perkins'),
+                                              Text(
+                                                ' dress',
+                                                style: TextStyle(
+                                                    fontSize: 16,
+                                                    fontWeight:
+                                                        FontWeight.bold),
+                                              ),
+                                              Row(
+                                                children: [
+                                                  Text(
+                                                    'Rs.2000',
+                                                    style: TextStyle(
+                                                        decoration:
+                                                            TextDecoration
+                                                                .lineThrough,
+                                                        color: Colors.grey),
+                                                  ),
+                                                  SizedBox(
+                                                    width: 10,
+                                                  ),
+                                                  Text(
+                                                    'Rs.1500',
+                                                    style: TextStyle(
+                                                        color: Colors.red),
+                                                  ),
+                                                ],
+                                              )
+                                            ],
                                           ),
                                         ],
-                                      )
-                                    ],
-                                  ),
-                                ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    
-                    
+                          ),
                         ],
                       ),
                     )
                   ],
                 ),
               ),
-              
             ],
           ),
         ),
