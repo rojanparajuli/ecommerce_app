@@ -1,0 +1,2 @@
+/home/rojan/Desktop/ecommerce_app/android/app/.cxx/Debug/t6e5o6y4/armeabi-v7a/CMakeFiles/edit_cache.dir
+/home/rojan/Desktop/ecommerce_app/android/app/.cxx/Debug/t6e5o6y4/armeabi-v7a/CMakeFiles/rebuild_cache.dir
